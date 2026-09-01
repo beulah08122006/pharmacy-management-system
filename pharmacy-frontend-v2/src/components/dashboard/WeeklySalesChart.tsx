@@ -49,7 +49,9 @@ const WeeklySalesChart = ({ sales, loading }: { sales: Sale[]; loading: boolean 
                 <CartesianGrid strokeDasharray="3 3" stroke="#EDF1F5" vertical={false} />
                 <XAxis dataKey="day" tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
                 <YAxis tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
-                <Tooltip formatter={(value: number) => [`₹${value}`, "Sales"]} />
+                <Tooltip
+                   formatter={(value) => [`₹${Number(value ?? 0)}`, "Sales"]}
+                />                
                 <Bar dataKey="amount" radius={[6, 6, 0, 0]}>
                   {data.map((entry, index) => (
                     <Cell key={index} fill={entry.isToday ? "#1565C0" : "#90CAF9"} />

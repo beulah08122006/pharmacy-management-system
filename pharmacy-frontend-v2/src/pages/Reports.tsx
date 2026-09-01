@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   Box, Typography, Paper, Grid, Button, Table, TableHead, TableBody, TableRow, TableCell,
-  Chip, Skeleton, Tooltip, IconButton,
+Chip, Skeleton, Tooltip,
 } from "@mui/material";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as ChartTooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import { BarChartOutlined, PictureAsPdf, GridOn, InfoOutlined } from "@mui/icons-material";
@@ -171,7 +171,9 @@ const Reports = () => {
                     <CartesianGrid strokeDasharray="3 3" stroke="#EDF1F5" vertical={false} />
                     <XAxis dataKey="label" tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
                     <YAxis tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
-                    <ChartTooltip formatter={(v: number) => [`₹${v}`, "Revenue"]} />
+                    <ChartTooltip
+                    formatter={(v) => [`₹${Number(v ?? 0)}`, "Revenue"]}
+                    />                    
                     <Bar dataKey="total" fill="#1565C0" radius={[6, 6, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
@@ -190,8 +192,10 @@ const Reports = () => {
                     <Pie data={categoryData} dataKey="value" nameKey="name" innerRadius={45} outerRadius={80} paddingAngle={2}>
                       {categoryData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                     </Pie>
-                    <ChartTooltip formatter={(v: number) => `₹${v}`} />
-                  </PieChart>
+                    <ChartTooltip
+                      formatter={(v) => `₹${Number(v ?? 0)}`}
+                    />                  
+                    </PieChart>
                 </ResponsiveContainer>
               )}
             </Box>

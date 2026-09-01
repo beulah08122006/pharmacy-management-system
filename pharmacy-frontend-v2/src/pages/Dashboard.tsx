@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Grid, Typography, Alert, Box } from "@mui/material";
+import { Grid, Typography, Alert } from "@mui/material";
 import {
   MedicationOutlined,
   PeopleAltOutlined,

@@ -582,9 +582,12 @@ const Billing = () => {
                   )
                 }
                 sx={{ width: 90 }}
-                inputProps={{
-                  min: 1,
-                }}
+                 slotProps={{
+    htmlInput: {
+      min: 1,
+      max: 100,
+    },
+  }}
               />
 
               <Button
@@ -941,9 +944,8 @@ const Billing = () => {
             </Typography>
 
             <Typography
-              variant="h4"
-              fontWeight={700}
-              sx={{ mb: 3 }}
+              color="text.secondary"
+              sx={{ fontSize: 24, fontWeight: 700 }}
             >
               {formatCurrency(grandTotal)}
             </Typography>
@@ -965,14 +967,15 @@ const Billing = () => {
                   }}
                 />
 
-                <Typography fontWeight={700}>
-                  Cash Payment
+                <Typography sx={{ fontWeight: 700 }}>
+                    Cash Payment
                 </Typography>
 
                 <Typography
-                  color="text.secondary"
-                  fontSize={14}
-                >
+                    color="text.secondary"
+                   sx={{ mb: 2, fontSize: 14 }}
+                 >
+            
                   Collect the payment from the
                   customer and confirm below.
                 </Typography>
@@ -997,17 +1000,15 @@ const Billing = () => {
                 />
 
                 <Typography
-                  fontWeight={700}
-                  sx={{ mb: 1 }}
-                >
+  sx={{ mb: 2, fontWeight: 700 }}
+>
                   Scan to Pay
                 </Typography>
 
-                <Typography
-                  color="text.secondary"
-                  fontSize={14}
-                  sx={{ mb: 2 }}
-                >
+               <Typography
+  color="text.secondary"
+  sx={{ mb: 2, fontSize: 14 }}
+>
                   Scan the pharmacy QR code using
                   the customer's UPI application.
                 </Typography>
@@ -1058,19 +1059,17 @@ const Billing = () => {
                     mb: 1,
                   }}
                 />
-
-                <Typography
-                  fontWeight={700}
-                  sx={{ mb: 1 }}
-                >
+<Typography
+  sx={{ mb: 1, fontWeight: 700 }}
+>
                   Stripe Card Payment
                 </Typography>
 
                 <Typography
-                  color="text.secondary"
-                  fontSize={14}
-                  sx={{ mb: 2 }}
+                 color="text.secondary"
+                sx={{ mb: 2, fontSize: 14 }}
                 >
+                
                   You will be redirected to
                   secure Stripe Checkout to
                   complete the card payment.

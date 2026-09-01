@@ -6,7 +6,6 @@ import {
   ListItemIcon,
   ListItemText,
   Typography,
-  Avatar,
   Toolbar,
 } from "@mui/material";
 import {
@@ -17,7 +16,6 @@ import {
   Inventory2Outlined,
   PointOfSaleOutlined,
   ReceiptLongOutlined,
-  BarChartOutlined,
   LocalPharmacyRounded,
   AssessmentRounded,
   SettingsRounded,

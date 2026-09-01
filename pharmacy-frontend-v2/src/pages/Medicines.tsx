@@ -54,7 +54,7 @@ const Medicines = () => {
 
   const [formOpen, setFormOpen] = useState(false);
   const [editing, setEditing] = useState<Medicine | null>(null);
-  const [viewing, setViewing] = useState<Medicine | null>(null);
+  const [, setViewing] = useState<Medicine | null>(null);
   const [deleteTarget, setDeleteTarget] = useState<Medicine | null>(null);
 
   const [snackbar, setSnackbar] = useState<{ open: boolean; message: string; severity: "success" | "error" }>({

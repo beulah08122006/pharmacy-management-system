@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 
 import {
-  WarningAmberOutlined,
   Inventory2Outlined,
   AccessTimeOutlined,
   LightbulbOutlined,
