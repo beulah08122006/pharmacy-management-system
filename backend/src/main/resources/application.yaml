@@ -1,20 +1,20 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/pharmacy_db
-    username: root
-    password: beulah0812
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
 
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
 
   sql:
     init:
       mode: never
 
 server:
-  port: 5050
+  port: ${PORT:5050}
 
 stripe:
   secret-key: ${STRIPE_SECRET_KEY}
