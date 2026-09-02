@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5050/api",
+  baseURL: "https://pharmacy-management-system-2pwy.onrender.com/api",
 
   headers: {
     "Content-Type": "application/json",
